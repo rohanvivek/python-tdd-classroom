@@ -14,7 +14,10 @@ class StringExercise:
         Returns True if character is an english vowel
         and False otherwise.
         """
-        return None
+        vowel = ['a', 'e', 'i', 'o', 'u']
+        if character.lower() in vowel:
+            return True
+        return False
 
     def find_longest_word(self, sentence):
         """

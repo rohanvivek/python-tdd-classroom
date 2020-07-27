@@ -7,7 +7,9 @@ class StringExercise:
         """
         Reverses order of characters in string input_str.
         """
-        return None
+        input_str = list(reversed(input_str))
+
+        return("".join(input_str))
 
     def is_english_vowel(self, character):
         """
@@ -24,11 +26,20 @@ class StringExercise:
         Returns the longest word in string sentence.
         In case there are several, return the first.
         """
-        return None
+        words_list = sentence.split()
+        word_len = []
+        for n in words_list:
+                word_len.append((len(n), n))
+        return (max(word_len, key = lambda i : i[0])[1])
 
     def get_word_lengths(self, text):
         """
         Returns a list of integers representing
         the word lengths in string text.
         """
-        return None
+        words_list = text.split()
+        word_len = []
+        for n in words_list:
+                word_len.append((len(n)))
+        return (word_len)
+        
